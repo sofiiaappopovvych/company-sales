@@ -1,0 +1,9 @@
+{
+  "name":"Company Sales Platform",
+  "short_name":"SalesPlatform",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#f6f7fb",
+  "theme_color":"#2855ff",
+  "icons":[]
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Sales Platform</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">SP</div>
+        <div>
+          <h1>Sales Platform</h1>
+          <p>Internal Company Hub</p>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sync-card">
+        <span id="syncDot" class="dot"></span>
+        <div>
+          <strong id="syncTitle">Local Mode</strong>
+          <p id="syncText">Data is saved on this device until Firebase is connected.</p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="dateLabel"></p>
+        </div>
+        <div class="user-panel">
+          <select id="roleSelect" title="Demo role">
+            <option value="manager">Sales Manager</option>
+            <option value="admin">Owner / Admin</option>
+          </select>
+          <input id="userName" placeholder="Your name" />
+          <button id="saveUserBtn">Save</button>
+        </div>
+      </header>
+
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <template id="leadFormTemplate">
+    <form class="card form-grid" id="leadForm">
+      <h3>Add New Lead</h3>
+      <input name="company" placeholder="Company / Contact name" required>
+      <input name="phone" placeholder="Phone">
+      <input name="email" placeholder="Email">
+      <input name="city" placeholder="City">
+      <select name="source">
+        <option>Facebook Group</option><option>Instagram</option><option>Cold Call</option><option>Referral</option><option>Partner</option><option>Church</option><option>School</option><option>Daycare</option><option>Grand Opening</option><option>City Event</option>
+      </select>
+      <select name="status">
+        <option>New</option><option>Contacted</option><option>Follow-up</option><option>Proposal Sent</option><option>Booked</option><option>Closed Won</option><option>Closed Lost</option>
+      </select>
+      <input name="nextFollowUp" type="date" placeholder="Next follow-up">
+      <textarea name="notes" placeholder="Notes"></textarea>
+      <button type="submit">Add Lead</button>
+    </form>
+  </template>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
