@@ -1,16 +1,14 @@
 // Firebase sync setup
-// 1) Create a Firebase project: https://console.firebase.google.com
-// 2) Enable Authentication -> Email/Password or Google
-// 3) Enable Firestore Database
-// 4) Copy your config below and set FIREBASE_ENABLED to true
+// Company Sales Platform
 
-const FIREBASE_ENABLED = false;
+const FIREBASE_ENABLED = true;
 
 const firebaseConfig = {
-  apiKey: "PASTE_API_KEY_HERE",
-  authDomain: "PASTE_PROJECT.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyAxfs4i8u9wm3zBy3vVfwcgiO8l3x2MyC4",
+  authDomain: "company-sales-platform.firebaseapp.com",
+  projectId: "company-sales-platform",
+  storageBucket: "company-sales-platform.firebasestorage.app",
+  messagingSenderId: "14117529912",
+  appId: "1:14117529912:web:60da984855ef19ee19f9cd",
+  measurementId: "G-06TJXRDM5G"
 };
